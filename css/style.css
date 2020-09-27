@@ -24,6 +24,7 @@ body{
 }
 .wrapper .box{
   width: 500px;
+  height:500px;
   margin: 0 auto;
   position: relative;
   perspective: 1000px;
