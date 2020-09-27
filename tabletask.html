@@ -45,41 +45,48 @@ form.example::after {
   clear: both;
   display: table;
 }
-    ul{
-        padding: 0;
-        list-style: none;
-        background: #f2f2f2;
-    }
-    ul li{
-        display: inline-block;
-        position: relative;
-        line-height: 21px;
-        text-align: left;
-    }
-    ul li a{
-        display: block;
-        padding: 8px 25px;
-        color: #333;
-        text-decoration: none;
-    }
-    ul li a:hover{
-        color: #fff;
-        background: #939393;
-    }
-    ul li ul.dropdown{
-        min-width: 100%; /* Set width of the dropdown */
-        background: #f2f2f2;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-    }
-    ul li:hover ul.dropdown{
-        display: block; /* Display the dropdown */
-    }
-    ul li ul.dropdown li{
-        display: block;
-    }
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
 </style>
 </head>
 <body>
@@ -88,11 +95,16 @@ form.example::after {
     <td col span="2" ></td>
     <td row span="5"></td>
     <td>
-      <div href="#" class="btn-plus">
-        <ul>
-          <li><a href="https://twitter.com">Twitter</a></li>
-        </ul>
-      </div>
+     
+        <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="https://twitter.com/duckduckgo">Twitter</a>
+    <a href="https://reddit.com">Reddit</a>
+    <a href="https://spreadprivacy.com/">Blog</a>
+    <a href="https://duckduckgo.com/newsletter">Newsletter</a>
+  </div>
+</div>
     </td>  
    </tr>
   <tr height=10%>
