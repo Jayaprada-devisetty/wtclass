@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <head>
   <title>Form</title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" " />
 </head>
 <body>
  <form action="https://jntuacea.net/wtclass/formsubmit.php" method="get">
-   <label for="stname">Enter your name:</label><input type="text" name="stname" id="stname" />
+   <label for="stname">Enter your name:</label>
+   <input type="text" name="stname" id="stname" pattern="[a-zA-Z ]{3,45}" placeholder="Name here.." required="required" title="This is name field. Name consists of Alphabets.Minimum of 3 characters and max of 45 characters"  />
    <br/>
-   <label for="rollno">Enter your roll no:</label><input type="text" name="rollno" id="rollno"/>
+   <label for="rollno">Enter your roll no:</label>
+   <input type="text" name="rollno" id="rollno"  placeholder="Rollno here.." value="18001A0504" maxlength="10" size="7" title="This is Roll no field" />
+   <br/>
+   Password:<input type="password" name="pwd" /><br/>
+   Gender:<input type="radio" name="gender" value="M" />Male
+          <input type="radio" name="gender" value="F" id="genderf" /><label for="genderf">Female</label>
+          <br/>
+    Gender:<input type="radio" name="gender" value="M" />Male
+          <input type="radio" name="genders" value="F" />Female
+   <br />
+   Interested Teams in IPL: <input type="checkbox" name="ipl[]" value="SRH">SRH
+                            <input type="checkbox" name="ipl[]" value="CSK">CSK
+                            <input type="checkbox" name="ipl[]" value="MI">MI
+                            <input type="checkbox" name="ipl[]" value="DC">DC
+   <br/>
+   Remarks:
+   <textarea name="remarks" rows="4" cols="40" placeholder="Remarks here..">ghfhgghghj</textarea>
+   <br />
+   Rating:
+   <select name="rating">
+   	<option value="1">1</option>
+   	<option value="2">2</option>
+   	<option value="3">3</option>
+   	<option value="none">I dont give</option>
+   	
+   </select>
    <br/>
    <input type="submit" name="btn" value="Go" />
   </form>  
+  <form action="https://google.co.in/search" method="get">
+    Google search:<input type="text" name="q" />
+    <br/>
+    <input type="submit" name="btn" value="Google search">
+</form>
+
 </body>
 </html>
